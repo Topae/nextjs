@@ -27,96 +27,100 @@ const dummyNews = [
 
 export default function ReadMore() {
   return (
-    <div className="min-h-screen bg-orange-50 flex flex-col">
-      <header className="bg-gradient-to-r from-orange-500 to-orange-600 py-4 px-6 shadow-lg">
+    <div className="min-h-screen bg-linear-to-tr from-orange-100 via-white to-orange-50 flex flex-col">
+      <header className="bg-white/80 backdrop-blur-xl sticky top-0 z-20 shadow-xl border-b border-orange-100 py-4 px-6">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-white drop-shadow-sm">
+            <h1 className="text-3xl font-extrabold text-orange-600 drop-shadow-md tracking-tighter select-none">
               OshiTime
             </h1>
           </div>
           <nav className="hidden md:flex space-x-8">
             <Link
               href="/"
-              className="text-white hover:text-orange-100 transition-colors duration-300">
+              className="font-semibold text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-3 py-1.5 rounded-lg shadow-sm transition-all duration-200">
               Home
             </Link>
             <Link
               href="/news"
-              className="text-white hover:text-orange-100 transition-colors duration-300">
+              className="font-semibold text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-3 py-1.5 rounded-lg shadow-sm transition-all duration-200">
               News
             </Link>
             <Link
               href="/member"
-              className="text-white hover:text-orange-100 transition-colors duration-300">
+              className="font-semibold text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-3 py-1.5 rounded-lg shadow-sm transition-all duration-200">
               Member
             </Link>
             <Link
               href="/live"
-              className="text-white hover:text-orange-100 transition-colors duration-300">
+              className="font-semibold text-orange-600 hover:bg-orange-50 hover:text-orange-700 px-3 py-1.5 rounded-lg shadow-sm transition-all duration-200">
               Live
             </Link>
           </nav>
         </div>
       </header>
-      <main className="flex-1 flex flex-col items-center justify-center px-6 pt-12 pb-20">
+      <main className="flex-1 flex flex-col items-center justify-center px-6 pt-14 pb-20">
         <div className="max-w-3xl w-full mx-auto">
-          <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 mb-8 text-center animate-fade-in">
+          <h1 className="text-5xl font-black bg-clip-text text-transparent bg-linear-to-r from-orange-600 via-rose-400 to-pink-500 mb-10 text-center animate-fade-in tracking-tight">
             Latest News Updates
           </h1>
-          <div className="space-y-8">
+          <div className="space-y-10">
             {dummyNews.map((news, i) => (
               <div
                 key={news.title}
-                className={`bg-white rounded-xl shadow-lg ring-1 ring-black/5 flex flex-col md:flex-row gap-6 items-center overflow-hidden p-6 animate-fade-up ${
+                className={`bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl ring-1 ring-orange-100 border border-orange-200 border-opacity-40 flex flex-col md:flex-row gap-6 items-center overflow-hidden p-7 transition-all duration-500 hover:shadow-orange-200 hover:shadow-2xl hover:scale-[1.025] group animate-fade-up ${
                   i === 0 ? "delay-100" : i === 1 ? "delay-200" : "delay-300"
                 } duration-700 ${
                   news.type === "featured" ? "border-2 border-orange-400" : ""
                 }`}>
-                <div className="relative w-full md:w-56 h-40 md:h-32 flex-shrink-0 rounded-lg overflow-hidden group">
+                <div className="relative w-full md:w-56 h-44 md:h-40 shrink-0 rounded-2xl overflow-hidden group">
                   <Image
                     src={news.img}
                     alt={news.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="flex-1">
-                  <p className="text-orange-600 text-sm mb-1">
-                    {news.date}
+                  <p className="text-orange-500 text-sm mb-1 font-semibold flex items-center gap-2">
+                    <span>{news.date}</span>
                     {news.type === "featured" && (
-                      <span className="ml-2 px-2 py-0.5 bg-orange-100 text-orange-600 rounded-full text-xs font-semibold">
+                      <span className="px-2 py-0.5 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shadow-md">
                         Featured
                       </span>
                     )}
                   </p>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h2 className="text-2xl font-black text-orange-800 mb-2 tracking-tight">
                     {news.title}
                   </h2>
-                  <p className="text-gray-700 mb-2">{news.desc}</p>
+                  <p className="text-gray-700 text-base mb-2 font-medium">
+                    {news.desc}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-12 text-center">
+          <div className="mt-16 text-center">
             <Link
               href="/news"
-              className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full shadow-md transition-all hover:shadow-lg hover:brightness-105 hover:-translate-y-0.5">
+              className="bg-linear-to-r from-orange-600 to-pink-500 text-white text-lg font-extrabold px-8 py-3 rounded-2xl shadow-xl transition-all hover:scale-105 hover:bg-pink-500/90 hover:shadow-2xl hover:brightness-110">
               Lihat Semua Berita
             </Link>
           </div>
         </div>
       </main>
-      <footer className="bg-gradient-to-r from-orange-500 to-red-500 text-white py-16 px-6 transition-colors duration-300 animate-fade-in delay-700">
+      <footer className="bg-linear-to-r from-orange-600 to-pink-500 text-white shadow-xl py-16 px-6 animate-fade-up delay-200 rounded-t-3xl mt-16 border-t-2 border-pink-100/30">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 items-start text-center md:text-left">
-          <div className="transition-transform duration-300 hover:-translate-y-1">
-            <h3 className="text-3xl font-extrabold mb-2">OshiTime</h3>
+          <div className="transition-transform duration-300 animate-fade-up delay-300">
+            <h3 className="text-3xl font-black mb-2 tracking-tight">
+              OshiTime
+            </h3>
             <p className="mt-4 text-white/90 text-lg">
               Your daily source for idol news and updates
             </p>
           </div>
-          <div className="transition-all duration-300 hover:-translate-y-1">
-            <h4 className="text-2xl font-extrabold mb-6 drop-shadow">
+          <div className="transition-all duration-300 animate-fade-up delay-400">
+            <h4 className="text-2xl font-black mb-6 underline underline-offset-8 decoration-white/30 decoration-2">
               Quick Links
             </h4>
             <ul className="space-y-4">
@@ -143,31 +147,31 @@ export default function ReadMore() {
               </li>
             </ul>
           </div>
-          <div className="transition-all duration-300 hover:-translate-y-1">
-            <h4 className="text-2xl font-extrabold mb-6 drop-shadow">
+          <div className="transition-all duration-300 animate-fade-up delay-500">
+            <h4 className="text-2xl font-black mb-6 underline underline-offset-8 decoration-white/30 decoration-2">
               Follow Us
             </h4>
             <div className="flex flex-col md:flex-row md:space-x-8 space-y-3 md:space-y-0 items-center md:items-start justify-center md:justify-start">
               <a
-                href="https://twitter.com"
+                href="https://x.com/oshitimeofc?t=pePK-kX9qf3ZJhpUaLfM4Q&s=09"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg hover:font-bold hover:underline underline-offset-4 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:animate-bounce">
+                className="text-lg hover:font-bold hover:underline underline-offset-4 font-medium transition-transform duration-200 hover:-translate-y-1">
                 Twitter
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/oshitime.ofc?igsh=MTdybHhwYjhkcXZ5OA=="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg hover:font-bold hover:underline underline-offset-4 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:animate-bounce">
+                className="text-lg hover:font-bold hover:underline underline-offset-4 font-medium transition-transform duration-200 hover:-translate-y-1">
                 Instagram
               </a>
               <a
-                href="https://youtube.com"
+                href="https://whatsapp.com/channel/0029VbBQnqCJP217M1yZ8B1E"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg hover:font-bold hover:underline underline-offset-4 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:animate-bounce">
-                YouTube
+                className="text-lg hover:font-bold hover:underline underline-offset-4 font-medium transition-transform duration-200 hover:-translate-y-1">
+                WhatsApp
               </a>
             </div>
           </div>
