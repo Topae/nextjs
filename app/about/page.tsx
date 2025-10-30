@@ -44,7 +44,7 @@ export default function AboutUs() {
         <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
           <div className="space-y-8 animate-fade-in transition-all">
             <h2 className="text-3xl font-black text-orange-700 mb-3">
-              Your Source for Idol Entertainment
+              Your Source for Fandom Inspiration
             </h2>
             <p className="text-gray-700 leading-relaxed text-xl font-medium">
               OshiTime is your premier destination for the latest updates, news,
@@ -72,8 +72,9 @@ export default function AboutUs() {
               Our Vision
             </h3>
             <p className="text-gray-700 text-lg font-medium">
-              To be the leading platform for idol entertainment news and
-              updates.
+              To become a creative, inspiring, interactive, positive, and
+              trustworthy fandom and community media platform where fans can
+              connect with their idols.
             </p>
           </div>
           <div className="bg-white/80 backdrop-blur-2xl p-10 rounded-2xl shadow-xl hover:shadow-orange-200 hover:shadow-2xl hover:scale-[1.055] transition-all duration-500 ring-1 ring-orange-100 border border-orange-200 border-opacity-40 animate-fade-in delay-100">
@@ -81,8 +82,9 @@ export default function AboutUs() {
               Our Mission
             </h3>
             <p className="text-gray-700 text-lg font-medium">
-              Delivering accurate, timely, and engaging content to fans
-              worldwide.
+              Building a positive, creative, and interactive fandom community
+              for young generations while supporting a modern and enjoyable
+              Indonesian fandom ecosystem.
             </p>
           </div>
           <div className="bg-white/80 backdrop-blur-2xl p-10 rounded-2xl shadow-xl hover:shadow-orange-200 hover:shadow-2xl hover:scale-[1.055] transition-all duration-500 ring-1 ring-orange-100 border border-orange-200 border-opacity-40 animate-fade-in delay-200">
@@ -90,7 +92,8 @@ export default function AboutUs() {
               Our Values
             </h3>
             <p className="text-gray-700 text-lg font-medium">
-              Integrity, passion, and dedication in everything we do.
+              OshiTime is a space for fans to express and share their creativity
+              through various forms of digital art.
             </p>
           </div>
         </div>

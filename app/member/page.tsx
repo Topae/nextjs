@@ -5,18 +5,18 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Member() {
-  const [selectedTeam, setSelectedTeam] = useState("Tim Inti");
+  const [selectedGroup, setSelectedGroup] = useState("JKT48");
   const members = [
-    { id: 1, name: "Member 1", team: "Tim Inti" },
-    { id: 2, name: "Member 2", team: "Tim Inti" },
-    { id: 3, name: "Member 3", team: "Tim Inti" },
-    { id: 4, name: "Member 4", team: "Tim Inti" },
-    { id: 5, name: "Member 5", team: "Tim Traine" },
-    { id: 6, name: "Member 6", team: "Tim Traine" },
-    { id: 7, name: "Member 7", team: "Tim Traine" },
-    { id: 8, name: "Member 8", team: "Tim Traine" },
+    { id: 1, name: "Member 1", group: "JKT48" },
+    { id: 2, name: "Member 2", group: "JKT48" },
+    { id: 3, name: "Member 3", group: "JKT48" },
+    { id: 4, name: "Member 4", group: "JKT48" },
+    { id: 5, name: "Member 5", group: "KLP48" },
+    { id: 6, name: "Member 6", group: "KLP48" },
+    { id: 7, name: "Member 7", group: "KLP48" },
+    { id: 8, name: "Member 8", group: "KLP48" },
   ];
-  const filteredMembers = members.filter((m) => m.team === selectedTeam);
+  const filteredMembers = members.filter((m) => m.group === selectedGroup);
 
   return (
     <div className="min-h-screen bg-linear-to-tr from-orange-100 via-white to-orange-50 flex flex-col">
@@ -59,17 +59,17 @@ export default function Member() {
         </h1>
         {/* Member Categories */}
         <div className="flex gap-4 mb-10 justify-center">
-          {["Tim Inti", "Tim Traine"].map((team) => (
+          {["JKT48", "KLP48"].map((group) => (
             <button
-              key={team}
+              key={group}
               className={`px-7 py-2 rounded-full bg-orange-100/80 text-orange-600 hover:bg-pink-200 hover:text-orange-800 font-bold shadow-md transition-all duration-200 border border-orange-200 focus-visible:outline-none focus:ring-2 focus:ring-orange-300${
-                selectedTeam === team
+                selectedGroup === group
                   ? " ring-2 ring-orange-400 bg-orange-200"
                   : ""
-              }`}
-              onClick={() => setSelectedTeam(team)}
+              } transition-transform hover:scale-105`}
+              onClick={() => setSelectedGroup(group)}
               type="button">
-              {team}
+              {group}
             </button>
           ))}
         </div>
@@ -90,7 +90,9 @@ export default function Member() {
               <h3 className="text-lg font-black px-4 text-orange-800 tracking-tight">
                 {item.name}
               </h3>
-              <p className="text-orange-500 px-4 pb-6 font-bold">{item.team}</p>
+              <p className="text-orange-500 px-4 pb-6 font-bold">
+                {item.group}
+              </p>
             </div>
           ))}
         </div>
