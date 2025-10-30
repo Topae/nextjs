@@ -47,15 +47,15 @@ export default function Privacy() {
               Information We Collect
             </h2>
             <p className="text-gray-700 leading-relaxed mb-5 text-base font-medium">
-              We collect information that you provide directly to us, including
-              when you create an account, make a purchase, or contact us for
-              support.
+              We collect information that you provide directly to OshiTime, such
+              as when you create an account, share content, participate in
+              community activities, or contact us for support.
             </p>
             <ul className="list-disc pl-6 text-orange-600 space-y-2 font-bold">
-              <li>Name and contact information</li>
-              <li>Account credentials</li>
-              <li>Payment information</li>
-              <li>Communication preferences</li>
+              <li>Username and contact details</li>
+              <li>Account information and login credentials</li>
+              <li>Content and media you share on the platform</li>
+              <li>Communication and notification preferences</li>
             </ul>
           </section>
           <section className="bg-white/75 backdrop-blur-lg rounded-3xl p-10 shadow-2xl ring-1 ring-orange-100 border border-orange-200 border-opacity-40 hover:shadow-orange-200 hover:shadow-2xl transition-all duration-300">
@@ -64,13 +64,13 @@ export default function Privacy() {
             </h2>
             <p className="text-gray-700 leading-relaxed mb-5 text-base font-medium">
               We use the information we collect to provide, maintain, and
-              improve our services, including:
+              improve the OshiTime experience, including:
             </p>
             <ul className="list-disc pl-6 text-orange-600 space-y-2 font-bold">
-              <li>Processing your transactions</li>
-              <li>Sending you updates and notifications</li>
-              <li>Responding to your requests</li>
-              <li>Improving our website and services</li>
+              <li>Personalizing your fandom experience</li>
+              <li>Sharing updates and news about your favorite idols</li>
+              <li>Connecting fans through creative and interactive content</li>
+              <li>Enhancing our platform and community features</li>
             </ul>
           </section>
           <section className="bg-white/75 backdrop-blur-lg rounded-3xl p-10 shadow-2xl ring-1 ring-orange-100 border border-orange-200 border-opacity-40 hover:shadow-orange-200 hover:shadow-2xl transition-all duration-300">
