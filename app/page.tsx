@@ -51,7 +51,9 @@ export default function Home() {
                   favorite idols.
                 </p>
                 <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:brightness-105 hover:-translate-y-0.5">
-                  Read More
+                  <Link href="/readmore" className="block w-full h-full">
+                    Read More
+                  </Link>
                 </button>
               </div>
               <div className="relative h-64 rounded-xl overflow-hidden group">
