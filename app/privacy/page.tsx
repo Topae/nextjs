@@ -87,6 +87,68 @@ export default function Privacy() {
           </section>
         </div>
       </main>
+      <footer className="bg-orange-500 text-white py-14 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 items-start">
+          <div>
+            <h3 className="text-2xl font-bold">OshiTime</h3>
+            <p className="mt-4 text-white/90">
+              Your daily source for idol news and updates
+            </p>
+          </div>
+          <div>
+            <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:underline underline-offset-4">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:underline underline-offset-4">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="hover:underline underline-offset-4">
+                  Privacy Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
+            <div className="flex space-x-6">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline underline-offset-4 transition-transform duration-200 hover:-translate-y-0.5">
+                Twitter
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline underline-offset-4 transition-transform duration-200 hover:-translate-y-0.5">
+                Instagram
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline underline-offset-4 transition-transform duration-200 hover:-translate-y-0.5">
+                YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

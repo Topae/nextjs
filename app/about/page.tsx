@@ -8,7 +8,9 @@ export default function AboutUs() {
       <header className="bg-gradient-to-r from-orange-500 to-orange-600 py-4 px-6 shadow-lg">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-white drop-shadow-sm">OshiTime</h1>
+            <h1 className="text-2xl font-bold text-white drop-shadow-sm">
+              OshiTime
+            </h1>
           </div>
           <nav className="hidden md:flex space-x-8">
             <Link
@@ -107,17 +109,23 @@ export default function AboutUs() {
             <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/about" className="hover:underline underline-offset-4">
+                <Link
+                  href="/about"
+                  className="hover:underline underline-offset-4">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:underline underline-offset-4">
+                <Link
+                  href="/contact"
+                  className="hover:underline underline-offset-4">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="hover:underline underline-offset-4">
+                <Link
+                  href="/privacy"
+                  className="hover:underline underline-offset-4">
                   Privacy Policy
                 </Link>
               </li>
